@@ -1,0 +1,17 @@
+name: ShopkeepersList
+version: '1.5'
+author: 0nys
+main: nl.me.shopkeeperslist.ShopkeepersList
+api-version: '1.20'
+depend:
+  - Shopkeepers
+commands:
+  findshops:
+    description: Find shops
+    usage: /findshops
+    aliases: [fs, shops]
+    permission: shopkeeperslist.findshops
+  shopkeeperslist:
+    description: ShopkeepersList commands
+    usage: /shopkeeperslist
+    aliases: [skl]
