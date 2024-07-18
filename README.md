@@ -25,6 +25,7 @@ This plugin is an add-on to [Blablubbabc](https://www.spigotmc.org/members/blabl
 | `shopkeeperslist.reload` | Gives the player permission to reload the configuration file. |
 
 ## GUI Example
+Here's an image of what a shopkeeper looks like in the GUI using the default configuration:
 ![Shopkeeper GUI](https://www.spigotmc.org/attachments/upload_2024-7-18_11-23-53-png.841602/)
 
 If you like this plugin, please consider [buying me a tea 🍵](https://www.buymeacoffee.com/0nys)
