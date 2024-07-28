@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ShopkeepersList-1.52-1.21">
+    <output-path>$PROJECT_DIR$/../../../Servers/Minecraft/testing-1.21-paper/plugins</output-path>
+    <root id="archive" name="ShopkeepersList-1.52-1.21.jar">
+      <element id="module-output" name="ShopkeepersList" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
