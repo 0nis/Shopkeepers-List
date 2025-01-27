@@ -5,12 +5,8 @@ import org.bukkit.OfflinePlayer;
 
 import java.util.Objects;
 import java.util.UUID;
-import java.util.logging.Logger;
 
 public class OfflinePlayerCache {
-
-    private static final Logger log = Logger.getLogger("OfflinePlayerCache");
-
     private static OfflinePlayer[] offlinePlayers;
     private static long expirationTimeMillis;
 
@@ -39,15 +35,7 @@ public class OfflinePlayerCache {
     }
 
     public static OfflinePlayer getOfflinePlayerByUUID(UUID uuid) {
-        OfflinePlayer[] offlinePlayers = getOfflinePlayers();
-
-        for (OfflinePlayer offlinePlayer : offlinePlayers) {
-            if (Objects.requireNonNull(offlinePlayer.getUniqueId()).equals(uuid)) {
-                return offlinePlayer;
-            }
-        }
-
-        // If a player cant be found in cache request single player
+        // If UUID is used there will be no API requests
         return Bukkit.getOfflinePlayer(uuid);
     }
 }
