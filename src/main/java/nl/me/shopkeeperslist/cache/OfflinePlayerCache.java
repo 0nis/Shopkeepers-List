@@ -33,9 +33,4 @@ public class OfflinePlayerCache {
         // If a player cant be found in cache request single player
         return Bukkit.getOfflinePlayer(name);
     }
-
-    public static OfflinePlayer getOfflinePlayerByUUID(UUID uuid) {
-        // If UUID is used there will be no API requests
-        return Bukkit.getOfflinePlayer(uuid);
-    }
 }

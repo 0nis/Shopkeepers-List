@@ -4,7 +4,6 @@ import com.nisovin.shopkeepers.api.shopkeeper.ShopType;
 import com.nisovin.shopkeepers.api.shopkeeper.Shopkeeper;
 import com.nisovin.shopkeepers.api.shopkeeper.TradingRecipe;
 import com.nisovin.shopkeepers.api.util.UnmodifiableItemStack;
-import nl.me.shopkeeperslist.cache.OfflinePlayerCache;
 import nl.me.shopkeeperslist.enums.ShopGUIType;
 import nl.me.shopkeeperslist.inventoryHolders.ShopInventoryHolder;
 import nl.me.shopkeeperslist.ShopkeepersList;
@@ -175,7 +174,7 @@ public class ShopDisplayUtils {
     public static ItemStack getHeadItem(Shopkeeper shopkeeper) {
         UUID uuid = ShopFindingUtils.findShopOwnerUUID(shopkeeper);
         if (uuid == null) return new ItemStack(Material.PLAYER_HEAD, 1);
-        OfflinePlayer offlinePlayer = OfflinePlayerCache.getOfflinePlayerByUUID(uuid);
+        OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(uuid);
         ItemStack headItem = new ItemStack(Material.PLAYER_HEAD, 1);
         SkullMeta skullMeta = (SkullMeta) headItem.getItemMeta();
         if (offlinePlayer.hasPlayedBefore()) skullMeta.setOwningPlayer(offlinePlayer);
