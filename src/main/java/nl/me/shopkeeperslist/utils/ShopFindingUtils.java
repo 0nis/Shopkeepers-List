@@ -5,6 +5,7 @@ import com.nisovin.shopkeepers.api.shopkeeper.Shopkeeper;
 import com.nisovin.shopkeepers.api.shopkeeper.admin.AdminShopkeeper;
 import com.nisovin.shopkeepers.api.shopkeeper.player.PlayerShopkeeper;
 import com.nisovin.shopkeepers.api.util.UnmodifiableItemStack;
+import nl.me.shopkeeperslist.cache.OfflinePlayerCache;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.enchantments.Enchantment;
@@ -67,7 +68,7 @@ public class ShopFindingUtils {
      */
     public static List<Shopkeeper> findShopsForPlayer(String player) {
         List<Shopkeeper> shops = new ArrayList<>();
-        OfflinePlayer playerObj = Bukkit.getOfflinePlayer(player);
+        OfflinePlayer playerObj = OfflinePlayerCache.getOfflinePlayer(player);
         if (playerObj == null || !playerObj.hasPlayedBefore()) return shops;
         ShopkeepersAPI.getShopkeeperRegistry().getPlayerShopkeepersByOwner(playerObj.getUniqueId()).forEach(shopkeeper -> {
             shops.add(shopkeeper);
